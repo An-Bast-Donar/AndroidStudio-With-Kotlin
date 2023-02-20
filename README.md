@@ -71,3 +71,35 @@ listOf es una función en Kotlin que se utiliza para crear una lista inmutable d
 ### MutableMapOf
 
 MutableMapOf es una función en Kotlin que se utiliza para crear un mapa mutable de pares clave-valor. Toma cualquier número de pares clave-valor como argumentos y devuelve un mapa que contiene esos pares.
+
+## Android Studio
+
+Tematica de Android Studio con kotlin
+
+### Adaptadores
+
+En el contexto de Android, los adaptadores son componentes que se utilizan para mostrar datos en las vistas, como ListView, RecyclerView o GridView. Los adaptadores son responsables de tomar datos de una fuente, como un arreglo o una lista, y convertirlos en vistas que se pueden mostrar en la interfaz de usuario. Hay dos tipos principales de adaptadores en Android: ArrayAdapter y RecyclerView.Adapter.
+
+- ArrayAdapter: se utiliza para mostrar una lista de elementos en una vista ListView. Con un ArrayAdapter, los elementos se presentan en una lista vertical y cada elemento se muestra en una sola línea de texto.
+
+- RecyclerView.Adapter: se utiliza para mostrar una lista de elementos en una vista RecyclerView. Con un RecyclerView.Adapter, los elementos se pueden presentar en una variedad de diseños, desde una lista vertical hasta una cuadrícula o un diseño de tarjeta.
+
+### Volley
+
+Volley es una biblioteca de red de Android que facilita la tarea de realizar solicitudes de red y gestionar las respuestas. Permite realizar solicitudes HTTP de manera sencilla y asíncrona, sin tener que preocuparse por la complejidad de la implementación de la red y la gestión de hilos.
+
+### Corutinas
+
+Las corutinas son una característica de Kotlin que permiten realizar tareas asíncronas de manera más sencilla y eficiente que los hilos tradicionales. A diferencia de los hilos, las corutinas no crean un nuevo hilo para cada tarea, sino que utilizan un hilo existente y realizan tareas de manera concurrente mediante la suspensión y la reanudación de la ejecución.
+
+### Arquitectura recomendada
+
+En Android Studio con Kotlin se recomienda seguir la arquitectura MVVM (Model-View-ViewModel). MVVM es una arquitectura de software que separa la lógica de presentación de la lógica de negocio y de los datos.
+
+En MVVM, la Vista (View) es responsable de la presentación de datos y de la interacción del usuario, el Modelo (Model) es responsable de la lógica de negocio y los datos y el ViewModel actúa como un intermediario entre la Vista y el Modelo, proporcionando datos a la Vista y procesando acciones del usuario que afectan al Modelo.
+
+La implementación de MVVM en Android Studio con Kotlin puede ser realizada con librerías como LiveData y ViewModel, que son proporcionadas por Android Jetpack. Estas librerías facilitan la implementación de la arquitectura MVVM y ofrecen ventajas como la observación de cambios en los datos y la gestión del ciclo de vida de los componentes de la aplicación.
+
+### Bata Biding
+
+El Data Binding es una técnica que permite enlazar los componentes de la interfaz de usuario de una aplicación directamente con los datos que se muestran en ella, utilizando una sintaxis declarativa. Esta técnica se utiliza para reducir el código repetitivo y mejorar la eficiencia y la facilidad de uso.
