@@ -77,6 +77,70 @@ class MainActivity : AppCompatActivity() {
             else -> println("Día inválido")
         }
 
+        // Crear una instancia de la data class
+        val persona = MiDataClass("Juan", 25)
+
+        // Acceder a las propiedades
+        println(persona.nombre) // Imprime "Juan"
+        println(persona.edad) // Imprime 25
+
+        // Crear una copia de la instancia
+        val persona2 = persona.copy()
+
+        // Comparar dos instancias de la data class
+        val persona3 = MiDataClass("Juan", 25)
+        println(persona == persona3) // Imprime true
+
+        // Desestructurar una instancia de la data class
+        var (nombre, edad) = persona
+        println(nombre) // Imprime "Juan"
+        println(edad) // Imprime 25
+
+        // Utilizar una enum class en una sentencia when
+        val estadoCivil = EstadoCivil.CASADO
+        when (estadoCivil) {
+            EstadoCivil.SOLTERO -> println("Estás soltero.")
+            EstadoCivil.CASADO -> println("Estás casado.")
+            EstadoCivil.DIVORCIADO -> println("Estás divorciado.")
+            EstadoCivil.VIUDO -> println("Estás viudo.")
+        }
+
+        // Acceder a las propiedades de la enum class
+        println(EstadoCivil.CASADO.ordinal) // Imprime 1
+        println(EstadoCivil.SOLTERO.name) // Imprime "SOLTERO"
+
+        // Utilizar una enum class en una función
+        fun esFinDeSemana(dia: DiaSemana) = dia == DiaSemana.SABADO || dia == DiaSemana.DOMINGO
+        println(esFinDeSemana(DiaSemana.LUNES)) // Imprime false
+        println(esFinDeSemana(DiaSemana.SABADO)) // Imprime true
+
+        with(persona) {
+            println("El nombre de la persona es $nombre")
+            println("La edad de la persona es $edad")
+        }
+
+        persona.apply {
+            edad = 31
+        }.let {
+            println("La edad actualizada de la persona es ${it.edad}")
+        }
+
+        val lista = listOf("elemento1", "elemento2", "elemento3")
+        val listaVacia = mutableListOf<String>()
+        listaVacia.add("elemento1")
+        listaVacia.add("elemento2")
+        lista.forEach { elemento ->
+            println(elemento)
+        }
+
+        val mapa = mutableMapOf("clave1" to "valor1", "clave2" to "valor2", "clave3" to "valor3")
+        val valor1 = mapa["clave1"]
+        val valor2 = mapa["clave2"]
+        val valor3 = mapa["clave3"]
+        mapa.forEach { (clave, valor) ->
+            println("La clave $clave tiene el valor $valor")
+        }
+
     }
 
     private fun sum(num1: Int, num2: Int): Int {
@@ -99,3 +163,54 @@ class MainActivity : AppCompatActivity() {
         return this > numero
     }
 }
+
+class NombreDeLaClase {
+    // propiedades y métodos de la clase
+}
+
+open class ClaseBase {
+    // propiedades y métodos de la clase base
+}
+
+class ClaseDerivada : ClaseBase() {
+    // propiedades y métodos adicionales de la clase derivada
+}
+
+open class Persona(val nombre: String, var edad: Int) {
+    open fun hablar(mensaje: String) {
+        println("$nombre dice: $mensaje")
+    }
+
+    fun caminar(pasos: Int) {
+        println("$nombre caminó $pasos pasos")
+    }
+}
+
+class Estudiante(nombre: String, edad: Int, val codigoEstudiante: String) : Persona(nombre, edad) {
+    fun estudiar(materia: String) {
+        println("$nombre está estudiando $materia")
+    }
+
+    override fun hablar(mensaje: String) {
+        super.hablar("Estudiante $codigoEstudiante dice: $mensaje")
+    }
+}
+
+interface NombreDeLaInterfaz {
+    // métodos de la interfaz
+}
+
+interface Movable {
+    fun mover(distancia: Double)
+}
+
+data class MiDataClass(val nombre: String, val edad: Int)
+
+enum class EstadoCivil {
+    SOLTERO,
+    CASADO,
+    DIVORCIADO,
+    VIUDO
+}
+
+enum class DiaSemana { LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO }

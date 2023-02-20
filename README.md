@@ -47,3 +47,27 @@ La sentencia when en Kotlin se utiliza para evaluar una expresión y ejecutar un
 ### Const
 
 En Kotlin, se puede usar la palabra clave const para declarar una variable que sea constante en tiempo de compilación. Una constante debe ser inicializada con un valor y su valor no puede ser cambiado durante la ejecución del programa.
+
+### POO
+
+La programación orientada a objetos (POO) es un paradigma de programación que se basa en el concepto de objetos, los cuales tienen un estado (atributos) y un comportamiento (métodos) que se definen a través de una clase. Kotlin es un lenguaje de programación que soporta completamente la POO y ofrece muchas características avanzadas. En Kotlin, una clase puede heredar de otra clase utilizando la palabra clave open y la clase base puede ser referenciada mediante la palabra clave super. En Kotlin, se pueden definir interfaces con la palabra clave interface. Una interfaz define un conjunto de métodos que deben ser implementados por las clases que la implementan.
+
+### Data Class
+
+En Kotlin, una data class es una clase que se utiliza para representar un conjunto de datos que se pueden almacenar en variables o pasarse como argumentos a funciones. Las data classes se utilizan para definir objetos que contienen datos y no tienen comportamiento.
+
+### Enum Class
+
+En Kotlin, enum class es una clase especial que permite definir un conjunto finito de constantes nombradas. Las enum class se utilizan para definir un conjunto de valores que representan una categoría o un estado.
+
+### Funciones de alcance
+
+Las funciones de alcance son funciones que están disponibles en cierto ámbito, como una clase o un objeto. En Kotlin, existen dos funciones de alcance principales: with y apply. La función with se utiliza para llamar a una función en un objeto sin tener que repetir el nombre del objeto en cada llamada de función. La función apply se utiliza para inicializar un objeto y luego llamar a funciones en el objeto en una sola expresión.
+
+### ListOf
+
+listOf es una función en Kotlin que se utiliza para crear una lista inmutable de elementos. Toma cualquier número de elementos como argumentos y devuelve una lista que contiene esos elementos. También podemos crear una lista vacía y agregar elementos a ella utilizando la función add
+
+### MutableMapOf
+
+MutableMapOf es una función en Kotlin que se utiliza para crear un mapa mutable de pares clave-valor. Toma cualquier número de pares clave-valor como argumentos y devuelve un mapa que contiene esos pares.
