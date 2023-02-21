@@ -103,3 +103,7 @@ La implementación de MVVM en Android Studio con Kotlin puede ser realizada con 
 ### Bata Biding
 
 El Data Binding es una técnica que permite enlazar los componentes de la interfaz de usuario de una aplicación directamente con los datos que se muestran en ella, utilizando una sintaxis declarativa. Esta técnica se utiliza para reducir el código repetitivo y mejorar la eficiencia y la facilidad de uso.
+
+### Retrofit
+
+Retrofit es una biblioteca de cliente HTTP para Android (y también para Java) que facilita el proceso de consumir servicios web RESTful en una aplicación Android. Retrofit convierte las solicitudes HTTP a objetos de Java/Kotlin, lo que hace que sea más fácil y conveniente para los desarrolladores trabajar con los datos recibidos de un servidor.
